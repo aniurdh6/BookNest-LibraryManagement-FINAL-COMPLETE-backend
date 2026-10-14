@@ -1,0 +1,3 @@
+package com.booknest.library.model;
+import jakarta.persistence.*;import jakarta.validation.constraints.*;
+@Entity public class Book{@Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id;@NotBlank public String title;@NotBlank public String author;@NotBlank @Column(unique=true) public String isbn;public String category;@Min(1) public int totalCopies=1;@Min(0) public int availableCopies=1;}
